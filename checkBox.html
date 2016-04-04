@@ -1,0 +1,89 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+<style>
+	 
+ .check{  background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    float: left;
+    font-weight: bold;
+    line-height: 15px;
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    position: relative;
+    color:#52bfac;
+    display:block; 	
+}
+.check:hover{
+border-color:#52bfac;
+    background-color: #9ddbd0;
+    cursor: pointer;
+	color:white;
+}
+.color{
+background-color: #9ddbd0;
+color:black;
+border-color:#6576c6;
+}
+
+i{
+padding-right:10px;
+width:15px;
+}
+</style>
+
+
+
+<div class="col-md-10" style="margin:100px;"> 
+
+
+	<div class=" form-group ">
+	    
+            <input type="checkbox" name="single" style="display:none;" value="single" id="single" autocomplete="off" />
+            <div class=" btn-group">
+                <label for="single" class="check checkBox">
+		<i class="fa fa-plus"></i>	
+                   Single Success Checkbox
+                </label>
+            </div>
+            <input type="checkbox" name="double" style="display:none;" value="double" id="double" autocomplete="off" />
+            <div class=" btn-group">
+                <label for="double" class="check checkBox">
+		<i class="fa fa-plus"></i>	
+                    Double Success Checkbox
+                </label>
+            </div>
+
+            <input type="checkbox" name="front" style="display:none;" value="front" id="front" autocomplete="off" />
+            <div class=" btn-group ">
+                <label for="front" class="check checkBox">
+		<i class="fa fa-plus"></i>	
+                   Front Success Checkbox
+                </label>
+            </div>
+
+	    <input type="checkbox" name="top" style="display:none;" value="top" id="top" autocomplete="off" />
+            <div class=" btn-group ">
+                <label for="top" class="check checkBox">
+		<i class="fa fa-plus"></i>	
+                    Top Success Checkbox
+                </label>
+            </div>			
+	
+
+        </div>
+</div>	
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+$(".checkBox").click(function(){
+	$(this).children().toggleClass('fa-check')
+	$(this).children().toggleClass('fa-plus')
+	$(this).toggleClass('color')
+});	
+
+</script>
+
+</html>
