@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+
+.radio{
+margin-top: 5px;
+margin-bottom: 5px;
+padding-top:5px;
+padding-bottom: 5px;
+width:200px;
+}
+.radio:hover{
+background-color:#E0E0E0;
+opacity:0.5;
+cursor:pointer;
+color:black;
+}
+.highlight{
+background:#3083AC;
+border-radius: 3px;
+color:white;
+}
+</style>
+
+  <div class="radio"><input type="radio" name="option"  value="option 1"> option 1 </div>
+  <div class="radio"><input type="radio" name="option"  value="option 2"> option 2 </div>
+  <div class="radio"><input type="radio" name="option"  value="option 3"> option 3 </div>
+  <div class="radio"><input type="radio" name="option"  value="option 4"> option 4 </div>
+
+<script>
+  var radio = function(){
+  $( ".radio").click(function() {
+    $('.radio').removeClass('highlight');
+    $(this).children().prop("checked", true);
+    $(this).addClass('highlight');
+  });
+
+  };
+
+  $(document).ready(radio);
+</script>
+</body>
+</html>
