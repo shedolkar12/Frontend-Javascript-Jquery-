@@ -1,0 +1,19 @@
+<div class="countdown">14</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$(document).ready(function() {
+
+  // Function to update counters on all elements with class counter
+  var doUpdate = function() {
+    $('.countdown').each(function() {
+      var count = parseInt($(this).html());
+      if (count !== 0) {
+        $(this).html(count - 1);
+      }
+    });
+  };
+
+  // Schedule the update to happen once every second
+  setInterval(doUpdate, 1000);
+});
+</script>
